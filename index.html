@@ -8,6 +8,7 @@
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
   <link rel="stylesheet" href="css/style.css">
+  <!-- <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.3/dist/cdn.min.js"></script> -->
   <title>لوحة تحكم عربية</title>
 </head>
 
@@ -20,16 +21,15 @@
     <div class="sidebar">
       <ul class="nav-list">
         <li class="nav-item brand-name">
-          <a href="#">
+          <a href="index.html">
             <span class="icon">
               <i class='bx bx-md bxs-castle'></i>
             </span>
             <span class="title">العلامة</span>
           </a>
-
         </li>
         <li class="nav-item active">
-          <a href="#">
+          <a href="index.html">
             <span class="icon">
               <i class='bx bx-md bx-home'></i>
             </span>
@@ -37,7 +37,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="#">
+          <a href="pages/products.html">
             <span class="icon">
               <i class='bx bx-md bx-cube'></i>
             </span>
@@ -45,7 +45,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="#">
+          <a href="pages/orders.html">
             <span class="icon">
               <i class='bx bx-md bx-package'></i>
             </span>
@@ -53,7 +53,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="#">
+          <a href="pages/categories.html">
             <span class="icon">
               <i class='bx bx-md bx-list-ul'></i>
             </span>
@@ -61,7 +61,15 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="#">
+          <a href="pages/packeges.html">
+            <span class="icon">
+              <i class='bx bx-md bx-minus-back'></i>
+            </span>
+            <span class="title">البكجات</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="pages/offers.html">
             <span class="icon">
               <i class='bx bx-md bxs-offer'></i>
             </span>
@@ -69,7 +77,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="#">
+          <a href="pages/users.html">
             <span class="icon">
               <i class='bx bx-md bx-group'></i>
             </span>
@@ -109,18 +117,13 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="#">
+          <a href="settings.html">
             <span class="icon">
               <i class='bx bx-md bx-cog'></i>
             </span>
             <span class="title">الاعدادات</span>
           </a>
         </li>
-        <!-- <li class="nav-item">11</li>
-        <li class="nav-item">12</li>
-        <li class="nav-item">13</li>
-        <li class="nav-item">14</li>
-        <li class="nav-item">15</li> -->
       </ul>
     </div>
 
@@ -165,9 +168,11 @@
             <div class="result-box">
               <div class="items">
                 <ul>
-                  <li><a href="">اعدادات الحساب</a></li>
-                  <li><a href="">سياسة الاستخدام</a></li>
-                  <li><a href="">تواصل معنا</a></li>
+                  <li><a href="">اعدادات الحساب</a><i class='bx bx-user-circle'></i></li>
+                  <li><a href="">سياسة الاستخدام</a>
+                    <i class='bx bx-notepad'></i>
+                  </li>
+                  <li><a href="">تواصل معنا</a><i class='bx bx-info-circle'></i></li>
                   <hr>
                   <li><a href="">تسجيل خروج</a><i class='bx bx-log-out-circle'></i></li>
                 </ul>
@@ -221,15 +226,11 @@
       </div>
     </div>
 
-    <!-- footer -->
-    <!-- <div class="footer">footer</div> -->
-
   </div>
-
-
 
   <script src="js/app.js"></script>
   <script src="js/theme-script.js"></script>
+  <script src="js/alpine.js"></script>
 </body>
 
 </html>

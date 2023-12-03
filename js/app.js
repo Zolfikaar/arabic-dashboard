@@ -6,21 +6,6 @@ let main = document.querySelector('.main');
 let close = document.querySelector('.toggle i[name="close"]');
 let menu = document.querySelector('.toggle i[name="menu"]');
 
-
-// listItems.forEach((item) => {
-//   // Adding class active to to list item when clicked
-
-//   // let activeItem = item.classList.contains('active')
-//   console.log(item.parentNode.childNodes)
-
-
-//   item.addEventListener('click', () => {
-//     item.classList.add('active');
-//     classList.contains
-//   })
-// });
-
-
 //  Sidebar Toggler
 // Menu Toggle
 toggle.onclick = function () {
