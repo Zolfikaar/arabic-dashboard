@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+  <link rel="stylesheet" href="../css/style.css">
+  <title>إنشاء حساب - لوحة تحكم عربية</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, var(--color-success) 0%, var(--color-primary) 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .auth-container {
+      background: var(--color-white);
+      border-radius: var(--card-border-radius);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      padding: 3rem;
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+    }
+
+    .auth-header {
+      margin-bottom: 2rem;
+    }
+
+    .auth-header h1 {
+      color: var(--color-dark);
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .auth-header p {
+      color: var(--color-dark-variant);
+      font-size: 1.1rem;
+    }
+
+    .brand-logo {
+      font-size: 4rem;
+      color: var(--color-success);
+      margin-bottom: 1rem;
+    }
+
+    .auth-form {
+      text-align: right;
+    }
+
+    .auth-form .form-group {
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    .auth-form .form-control {
+      padding: 1rem;
+      padding-right: 3rem;
+      font-size: 1.1rem;
+      border-radius: var(--border-radius-3);
+    }
+
+    .form-icon {
+      position: absolute;
+      top: 50%;
+      right: 1rem;
+      transform: translateY(-50%);
+      color: var(--color-dark-variant);
+      font-size: 1.2rem;
+    }
+
+    .auth-form .btn {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.1rem;
+      border-radius: var(--border-radius-3);
+      margin-top: 1rem;
+    }
+
+    .auth-links {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .auth-links a {
+      color: var(--color-primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .auth-links a:hover {
+      text-decoration: underline;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .password-strength {
+      margin-top: 0.5rem;
+      font-size: 0.875rem;
+    }
+
+    .strength-indicator {
+      height: 4px;
+      background: var(--color-info-light);
+      border-radius: 2px;
+      margin-top: 0.25rem;
+      overflow: hidden;
+    }
+
+    .strength-bar {
+      height: 100%;
+      transition: all 0.3s;
+      border-radius: 2px;
+    }
+
+    .strength-weak {
+      background: var(--color-danger);
+      width: 25%;
+    }
+
+    .strength-fair {
+      background: var(--color-warning);
+      width: 50%;
+    }
+
+    .strength-good {
+      background: var(--color-primary);
+      width: 75%;
+    }
+
+    .strength-strong {
+      background: var(--color-success);
+      width: 100%;
+    }
+
+    .terms-checkbox {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      margin: 1.5rem 0;
+      text-align: right;
+    }
+
+    .terms-checkbox input {
+      margin-top: 0.25rem;
+    }
+
+    .terms-checkbox label {
+      font-size: 0.9rem;
+      color: var(--color-dark-variant);
+      line-height: 1.4;
+    }
+
+    .terms-checkbox a {
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+
+    .terms-checkbox a:hover {
+      text-decoration: underline;
+    }
+
+    .language-switch {
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+    }
+
+    .language-switch button {
+      background: rgba(255, 255, 255, 0.2);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: var(--border-radius-2);
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+    }
+
+    .language-switch button:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Language Switch -->
+  <div class="language-switch">
+    <button onclick="toggleAuthLanguage()" id="authLanguageBtn">English</button>
+  </div>
+
+  <div class="auth-container">
+    <div class="auth-header">
+      <div class="brand-logo">
+        <i class='bx bx-user-plus'></i>
+      </div>
+      <h1 id="registerTitle">إنشاء حساب جديد</h1>
+      <p id="registerSubtitle">انضم إلينا وابدأ رحلتك</p>
+    </div>
+
+    <form class="auth-form" id="registerForm">
+      <div class="form-row">
+        <div class="form-group">
+          <div class="form-icon">
+            <i class='bx bx-user'></i>
+          </div>
+          <input type="text" class="form-control" id="firstName" placeholder="الاسم الأول" required>
+        </div>
+
+        <div class="form-group">
+          <div class="form-icon">
+            <i class='bx bx-user'></i>
+          </div>
+          <input type="text" class="form-control" id="lastName" placeholder="الاسم الأخير" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="form-icon">
+          <i class='bx bx-envelope'></i>
+        </div>
+        <input type="email" class="form-control" id="email" placeholder="البريد الإلكتروني" required>
+      </div>
+
+      <div class="form-group">
+        <div class="form-icon">
+          <i class='bx bx-phone'></i>
+        </div>
+        <input type="tel" class="form-control" id="phone" placeholder="رقم الهاتف" required>
+      </div>
+
+      <div class="form-group">
+        <div class="form-icon">
+          <i class='bx bx-lock-alt'></i>
+        </div>
+        <input type="password" class="form-control" id="password" placeholder="كلمة المرور" required
+          onkeyup="checkPasswordStrength()">
+        <div class="password-strength">
+          <div id="strengthText">قوة كلمة المرور: ضعيفة</div>
+          <div class="strength-indicator">
+            <div class="strength-bar" id="strengthBar"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="form-icon">
+          <i class='bx bx-lock-alt'></i>
+        </div>
+        <input type="password" class="form-control" id="confirmPassword" placeholder="تأكيد كلمة المرور" required>
+      </div>
+
+      <div class="form-group">
+        <div class="form-icon">
+          <i class='bx bx-building'></i>
+        </div>
+        <input type="text" class="form-control" id="company" placeholder="اسم الشركة (اختياري)">
+      </div>
+
+      <div class="terms-checkbox">
+        <input type="checkbox" id="terms" class="form-check-input" required>
+        <label for="terms" id="termsLabel">
+          أوافق على <a href="#" id="termsLink">الشروط والأحكام</a> و <a href="#" id="privacyLink">سياسة الخصوصية</a>
+        </label>
+      </div>
+
+      <div class="terms-checkbox">
+        <input type="checkbox" id="newsletter" class="form-check-input">
+        <label for="newsletter" id="newsletterLabel">
+          أرغب في تلقي النشرة الإخبارية والعروض الخاصة
+        </label>
+      </div>
+
+      <button type="submit" class="btn btn-success" id="registerBtn">إنشاء الحساب</button>
+    </form>
+
+    <div class="auth-links">
+      <p id="hasAccountText">لديك حساب بالفعل؟ <a href="login.html" id="loginLink">تسجيل الدخول</a></p>
+    </div>
+  </div>
+
+  <script src="../js/theme-script.js"></script>
+  <script>
+    // Language switching for auth pages
+    let authLanguage = 'ar';
+
+    const authTranslations = {
+      ar: {
+        registerTitle: 'إنشاء حساب جديد',
+        registerSubtitle: 'انضم إلينا وابدأ رحلتك',
+        firstNamePlaceholder: 'الاسم الأول',
+        lastNamePlaceholder: 'الاسم الأخير',
+        emailPlaceholder: 'البريد الإلكتروني',
+        phonePlaceholder: 'رقم الهاتف',
+        passwordPlaceholder: 'كلمة المرور',
+        confirmPasswordPlaceholder: 'تأكيد كلمة المرور',
+        companyPlaceholder: 'اسم الشركة (اختياري)',
+        termsLabel: 'أوافق على <a href="#" id="termsLink">الشروط والأحكام</a> و <a href="#" id="privacyLink">سياسة الخصوصية</a>',
+        newsletterLabel: 'أرغب في تلقي النشرة الإخبارية والعروض الخاصة',
+        registerBtn: 'إنشاء الحساب',
+        hasAccountText: 'لديك حساب بالفعل؟',
+        loginLink: 'تسجيل الدخول',
+        languageBtn: 'English',
+        strengthWeak: 'قوة كلمة المرور: ضعيفة',
+        strengthFair: 'قوة كلمة المرور: متوسطة',
+        strengthGood: 'قوة كلمة المرور: جيدة',
+        strengthStrong: 'قوة كلمة المرور: قوية'
+      },
+      en: {
+        registerTitle: 'Create New Account',
+        registerSubtitle: 'Join us and start your journey',
+        firstNamePlaceholder: 'First Name',
+        lastNamePlaceholder: 'Last Name',
+        emailPlaceholder: 'Email Address',
+        phonePlaceholder: 'Phone Number',
+        passwordPlaceholder: 'Password',
+        confirmPasswordPlaceholder: 'Confirm Password',
+        companyPlaceholder: 'Company Name (Optional)',
+        termsLabel: 'I agree to <a href="#" id="termsLink">Terms & Conditions</a> and <a href="#" id="privacyLink">Privacy Policy</a>',
+        newsletterLabel: 'I want to receive newsletter and special offers',
+        registerBtn: 'Create Account',
+        hasAccountText: 'Already have an account?',
+        loginLink: 'Sign In',
+        languageBtn: 'العربية',
+        strengthWeak: 'Password strength: Weak',
+        strengthFair: 'Password strength: Fair',
+        strengthGood: 'Password strength: Good',
+        strengthStrong: 'Password strength: Strong'
+      }
+    };
+
+    function toggleAuthLanguage() {
+      const html = document.documentElement;
+
+      if (authLanguage === 'ar') {
+        html.setAttribute('lang', 'en');
+        html.setAttribute('dir', 'ltr');
+        authLanguage = 'en';
+        updateAuthText('en');
+      } else {
+        html.setAttribute('lang', 'ar');
+        html.setAttribute('dir', 'rtl');
+        authLanguage = 'ar';
+        updateAuthText('ar');
+      }
+    }
+
+    function updateAuthText(lang) {
+      const texts = authTranslations[lang];
+
+      document.getElementById('registerTitle').textContent = texts.registerTitle;
+      document.getElementById('registerSubtitle').textContent = texts.registerSubtitle;
+      document.getElementById('firstName').placeholder = texts.firstNamePlaceholder;
+      document.getElementById('lastName').placeholder = texts.lastNamePlaceholder;
+      document.getElementById('email').placeholder = texts.emailPlaceholder;
+      document.getElementById('phone').placeholder = texts.phonePlaceholder;
+      document.getElementById('password').placeholder = texts.passwordPlaceholder;
+      document.getElementById('confirmPassword').placeholder = texts.confirmPasswordPlaceholder;
+      document.getElementById('company').placeholder = texts.companyPlaceholder;
+      document.getElementById('termsLabel').innerHTML = texts.termsLabel;
+      document.getElementById('newsletterLabel').textContent = texts.newsletterLabel;
+      document.getElementById('registerBtn').textContent = texts.registerBtn;
+      document.getElementById('hasAccountText').innerHTML = texts.hasAccountText + ' <a href="login.html" id="loginLink">' + texts.loginLink + '</a>';
+      document.getElementById('authLanguageBtn').textContent = texts.languageBtn;
+
+      // Update password strength text
+      checkPasswordStrength();
+    }
+
+    // Password strength checker
+    function checkPasswordStrength() {
+      const password = document.getElementById('password').value;
+      const strengthText = document.getElementById('strengthText');
+      const strengthBar = document.getElementById('strengthBar');
+      const texts = authTranslations[authLanguage];
+
+      let strength = 0;
+
+      if (password.length >= 8) strength++;
+      if (/[a-z]/.test(password)) strength++;
+      if (/[A-Z]/.test(password)) strength++;
+      if (/[0-9]/.test(password)) strength++;
+      if (/[^A-Za-z0-9]/.test(password)) strength++;
+
+      strengthBar.className = 'strength-bar';
+
+      if (strength <= 2) {
+        strengthBar.classList.add('strength-weak');
+        strengthText.textContent = texts.strengthWeak;
+      } else if (strength === 3) {
+        strengthBar.classList.add('strength-fair');
+        strengthText.textContent = texts.strengthFair;
+      } else if (strength === 4) {
+        strengthBar.classList.add('strength-good');
+        strengthText.textContent = texts.strengthGood;
+      } else {
+        strengthBar.classList.add('strength-strong');
+        strengthText.textContent = texts.strengthStrong;
+      }
+    }
+
+    // Form submission
+    document.getElementById('registerForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
+      const terms = document.getElementById('terms').checked;
+
+      if (password !== confirmPassword) {
+        alert(authLanguage === 'ar' ? 'كلمات المرور غير متطابقة' : 'Passwords do not match');
+        return;
+      }
+
+      if (!terms) {
+        alert(authLanguage === 'ar' ? 'يجب الموافقة على الشروط والأحكام' : 'You must agree to terms and conditions');
+        return;
+      }
+
+      // Simulate registration process
+      document.getElementById('registerBtn').textContent = authLanguage === 'ar' ? 'جاري إنشاء الحساب...' : 'Creating account...';
+      document.getElementById('registerBtn').disabled = true;
+
+      setTimeout(() => {
+        alert(authLanguage === 'ar' ? 'تم إنشاء الحساب بنجاح!' : 'Account created successfully!');
+        window.location.href = 'login.html';
+      }, 2000);
+    });
+
+    // Initialize theme
+    document.addEventListener('DOMContentLoaded', () => {
+      if (localStorage.getItem('theme') === 'dark-theme') {
+        document.body.classList.add('dark-theme');
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+  <link rel="stylesheet" href="../css/style.css">
+  <title>النماذج - لوحة تحكم عربية</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- sidebar -->
+    <div class="sidebar">
+      <ul class="nav-list">
+        <li class="nav-item brand-name">
+          <a href="../index.html">
+            <span class="icon">
+              <i class='bx bx-md bxs-castle'></i>
+            </span>
+            <span class="title">العلامة</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../index.html">
+            <span class="icon">
+              <i class='bx bx-md bx-home'></i>
+            </span>
+            <span class="title">لوحة التحكم</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="products.html">
+            <span class="icon">
+              <i class='bx bx-md bx-cube'></i>
+            </span>
+            <span class="title">المنتجات</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="orders.html">
+            <span class="icon">
+              <i class='bx bx-md bx-package'></i>
+            </span>
+            <span class="title">الطلبيات</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="categories.html">
+            <span class="icon">
+              <i class='bx bx-md bx-list-ul'></i>
+            </span>
+            <span class="title">الاقسام</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="packeges.html">
+            <span class="icon">
+              <i class='bx bx-md bx-minus-back'></i>
+            </span>
+            <span class="title">البكجات</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="offers.html">
+            <span class="icon">
+              <i class='bx bx-md bxs-offer'></i>
+            </span>
+            <span class="title">العروض</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="users.html">
+            <span class="icon">
+              <i class='bx bx-md bx-group'></i>
+            </span>
+            <span class="title">الزبائن</span>
+          </a>
+        </li>
+        <li class="nav-item has-submenu">
+          <a href="#" onclick="toggleSubmenu(this)">
+            <span class="icon">
+              <i class='bx bx-md bx-key'></i>
+            </span>
+            <span class="title">المسؤولين</span>
+          </a>
+          <ul class="sub-menu">
+            <li class="nav-item">
+              <a href="user-add.html">
+                <span class="icon"><i class='bx bx-user-plus'></i></span>
+                <span class="title">إضافة مسؤول</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon"><i class='bx bx-user-check'></i></span>
+                <span class="title">الصلاحيات</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item has-submenu">
+          <a href="#" onclick="toggleSubmenu(this)">
+            <span class="icon">
+              <i class='bx bx-md bx-archive'></i>
+            </span>
+            <span class="title">المخزن</span>
+          </a>
+          <ul class="sub-menu">
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon"><i class='bx bx-box'></i></span>
+                <span class="title">إدارة المخزون</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon"><i class='bx bx-transfer'></i></span>
+                <span class="title">حركة البضائع</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon"><i class='bx bx-bar-chart'></i></span>
+                <span class="title">تقارير المخزون</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="#">
+            <span class="icon">
+              <i class='bx bx-md bx-minus-back'></i>
+            </span>
+            <span class="title">المرجوع</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#">
+            <span class="icon">
+              <i class='bx bx-md bx-pulse bx-rotate-90'></i>
+            </span>
+            <span class="title">التلف</span>
+          </a>
+        </li>
+        <li class="nav-item has-submenu">
+          <a href="#" onclick="toggleSubmenu(this)">
+            <span class="icon">
+              <i class='bx bx-md bx-file-blank'></i>
+            </span>
+            <span class="title">التقارير</span>
+          </a>
+          <ul class="sub-menu">
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon"><i class='bx bx-trending-up'></i></span>
+                <span class="title">تقرير المبيعات</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon"><i class='bx bx-money'></i></span>
+                <span class="title">التقرير المالي</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon"><i class='bx bx-user'></i></span>
+                <span class="title">تقرير العملاء</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="components.html">
+            <span class="icon">
+              <i class='bx bx-md bx-layer'></i>
+            </span>
+            <span class="title">العناصر</span>
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a href="forms.html">
+            <span class="icon">
+              <i class='bx bx-md bx-edit'></i>
+            </span>
+            <span class="title">النماذج</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="settings.html">
+            <span class="icon">
+              <i class='bx bx-md bx-cog'></i>
+            </span>
+            <span class="title">الاعدادات</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- main content -->
+    <div class="main">
+      <!-- Top Bar -->
+      <div class="topbar">
+        <!-- Toggle button -->
+        <div class="toggle">
+          <i class='bx bx-menu' name="menu"></i>
+          <i class='bx bx-x' name="close"></i>
+        </div>
+        <!-- Search field -->
+        <div class="search">
+          <label for="">
+            <input type="text" placeholder="بحث">
+            <i class='bx bx-search'></i>
+          </label>
+        </div>
+
+        <!-- User profile -->
+        <div class="user">
+
+          <!-- Language Switcher -->
+          <div class="language-switcher">
+            <button class="language-btn" onclick="toggleLanguage()" id="languageBtn">
+              العربية
+            </button>
+          </div>
+
+          <!-- Color Picker -->
+          <div class="color-picker">
+            <div class="color-btn" onclick="toggleColorPalette()"></div>
+            <div class="color-palette" id="colorPalette">
+              <div class="color-option" style="background: #7380ec" onclick="changeColor('#7380ec')"
+                data-color="#7380ec"></div>
+              <div class="color-option" style="background: #ff6b6b" onclick="changeColor('#ff6b6b')"
+                data-color="#ff6b6b"></div>
+              <div class="color-option" style="background: #4ecdc4" onclick="changeColor('#4ecdc4')"
+                data-color="#4ecdc4"></div>
+              <div class="color-option" style="background: #45b7d1" onclick="changeColor('#45b7d1')"
+                data-color="#45b7d1"></div>
+              <div class="color-option" style="background: #96ceb4" onclick="changeColor('#96ceb4')"
+                data-color="#96ceb4"></div>
+              <div class="color-option" style="background: #ffeaa7" onclick="changeColor('#ffeaa7')"
+                data-color="#ffeaa7"></div>
+              <div class="color-option" style="background: #dda0dd" onclick="changeColor('#dda0dd')"
+                data-color="#dda0dd"></div>
+              <div class="color-option" style="background: #98d8c8" onclick="changeColor('#98d8c8')"
+                data-color="#98d8c8"></div>
+            </div>
+          </div>
+
+          <!-- Theme Toggler -->
+          <div class="theme-toggler">
+            <span class="icon">
+              <i class='bx bx-sun' name="sun"></i>
+            </span>
+          </div>
+
+          <div class="dropBox">
+            <div class="select-btn">
+              <span class="icon">
+                <i class='bx bx-chevron-down'></i>
+              </span>
+              <span class="user-name">John Doe</span>
+              <div class="img-box"><img src="../images/admin.jpg" alt=""></div>
+            </div>
+
+            <div class="result-box">
+              <div class="items">
+                <ul>
+                  <li><a href="">اعدادات الحساب</a><i class='bx bx-user-circle'></i></li>
+                  <li><a href="">سياسة الاستخدام</a><i class='bx bx-notepad'></i></li>
+                  <li><a href="">تواصل معنا</a><i class='bx bx-info-circle'></i></li>
+                  <hr>
+                  <li><a href="">تسجيل خروج</a><i class='bx bx-log-out-circle'></i></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="content">
+        <div class="content-header">
+          <h2>النماذج الحديثة</h2>
+        </div>
+
+        <div class="content-body">
+          <!-- Basic Form Elements -->
+          <div class="modern-card">
+            <div class="card-header">
+              <h3 class="card-title">عناصر النموذج الأساسية</h3>
+            </div>
+
+            <form>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+
+                <!-- Text Input -->
+                <div class="form-group">
+                  <label class="form-label" for="name">الاسم الكامل</label>
+                  <input type="text" class="form-control" id="name" placeholder="أدخل الاسم الكامل">
+                </div>
+
+                <!-- Email Input -->
+                <div class="form-group">
+                  <label class="form-label" for="email">البريد الإلكتروني</label>
+                  <input type="email" class="form-control" id="email" placeholder="example@domain.com">
+                </div>
+
+                <!-- Password Input -->
+                <div class="form-group">
+                  <label class="form-label" for="password">كلمة المرور</label>
+                  <input type="password" class="form-control" id="password" placeholder="••••••••">
+                </div>
+
+                <!-- Number Input -->
+                <div class="form-group">
+                  <label class="form-label" for="phone">رقم الهاتف</label>
+                  <input type="tel" class="form-control" id="phone" placeholder="+966 50 123 4567">
+                </div>
+
+                <!-- Date Input -->
+                <div class="form-group">
+                  <label class="form-label" for="birthdate">تاريخ الميلاد</label>
+                  <input type="date" class="form-control" id="birthdate">
+                </div>
+
+                <!-- Select -->
+                <div class="form-group">
+                  <label class="form-label" for="country">البلد</label>
+                  <select class="form-control form-select" id="country">
+                    <option value="">اختر البلد</option>
+                    <option value="sa">السعودية</option>
+                    <option value="ae">الإمارات</option>
+                    <option value="kw">الكويت</option>
+                    <option value="qa">قطر</option>
+                    <option value="bh">البحرين</option>
+                    <option value="om">عمان</option>
+                  </select>
+                </div>
+
+              </div>
+
+              <!-- Textarea -->
+              <div class="form-group">
+                <label class="form-label" for="bio">نبذة شخصية</label>
+                <textarea class="form-control" id="bio" rows="4" placeholder="اكتب نبذة مختصرة عنك..."></textarea>
+              </div>
+
+              <!-- Checkboxes -->
+              <div class="form-group">
+                <label class="form-label">الاهتمامات</label>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="tech">
+                    <label class="form-check-label" for="tech">التكنولوجيا</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="sports">
+                    <label class="form-check-label" for="sports">الرياضة</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="travel">
+                    <label class="form-check-label" for="travel">السفر</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="reading">
+                    <label class="form-check-label" for="reading">القراءة</label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Radio Buttons -->
+              <div class="form-group">
+                <label class="form-label">الجنس</label>
+                <div style="display: flex; gap: 2rem;">
+                  <div class="form-check">
+                    <input type="radio" class="form-check-input" id="male" name="gender">
+                    <label class="form-check-label" for="male">ذكر</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="radio" class="form-check-input" id="female" name="gender">
+                    <label class="form-check-label" for="female">أنثى</label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- File Upload -->
+              <div class="form-group">
+                <label class="form-label" for="avatar">الصورة الشخصية</label>
+                <input type="file" class="form-control" id="avatar" accept="image/*">
+              </div>
+
+              <!-- Range Slider -->
+              <div class="form-group">
+                <label class="form-label" for="experience">سنوات الخبرة: <span id="experienceValue">5</span></label>
+                <input type="range" class="form-control" id="experience" min="0" max="20" value="5"
+                  oninput="document.getElementById('experienceValue').textContent = this.value">
+              </div>
+
+              <!-- Form Actions -->
+              <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
+                <button type="submit" class="btn btn-primary">حفظ البيانات</button>
+                <button type="button" class="btn btn-outline-secondary">إلغاء</button>
+                <button type="reset" class="btn btn-outline-danger">إعادة تعيين</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Advanced Form Elements -->
+          <div class="modern-card">
+            <div class="card-header">
+              <h3 class="card-title">عناصر متقدمة</h3>
+            </div>
+
+            <form>
+              <!-- Multi-step Form Simulation -->
+              <div class="form-group">
+                <label class="form-label">خطوات النموذج</label>
+                <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+                  <div class="btn btn-primary">1. المعلومات الشخصية</div>
+                  <div class="btn btn-outline-primary">2. معلومات الاتصال</div>
+                  <div class="btn btn-outline-primary">3. التفضيلات</div>
+                  <div class="btn btn-outline-primary">4. المراجعة</div>
+                </div>
+              </div>
+
+              <!-- Dynamic Fields -->
+              <div class="form-group">
+                <label class="form-label">المهارات</label>
+                <div id="skillsContainer">
+                  <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem;">
+                    <input type="text" class="form-control" placeholder="اسم المهارة" style="flex: 1;">
+                    <select class="form-control form-select" style="width: 150px;">
+                      <option>مبتدئ</option>
+                      <option>متوسط</option>
+                      <option>متقدم</option>
+                      <option>خبير</option>
+                    </select>
+                    <button type="button" class="btn btn-danger" onclick="removeSkill(this)">حذف</button>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-outline-primary" onclick="addSkill()">إضافة مهارة</button>
+              </div>
+
+              <!-- Color Picker -->
+              <div class="form-group">
+                <label class="form-label" for="favoriteColor">اللون المفضل</label>
+                <input type="color" class="form-control" id="favoriteColor" value="#7380ec" style="height: 50px;">
+              </div>
+
+              <!-- URL Input -->
+              <div class="form-group">
+                <label class="form-label" for="website">الموقع الإلكتروني</label>
+                <input type="url" class="form-control" id="website" placeholder="https://example.com">
+              </div>
+
+              <!-- Search Input -->
+              <div class="form-group">
+                <label class="form-label" for="search">البحث</label>
+                <input type="search" class="form-control" id="search" placeholder="ابحث في قاعدة البيانات...">
+              </div>
+
+              <!-- Hidden Input (for demo) -->
+              <input type="hidden" id="userId" value="12345">
+
+              <!-- Form Validation Example -->
+              <div class="form-group">
+                <label class="form-label" for="validationEmail">بريد إلكتروني (مطلوب)</label>
+                <input type="email" class="form-control" id="validationEmail" required>
+                <div class="invalid-feedback"
+                  style="color: var(--color-danger); font-size: 0.875rem; margin-top: 0.25rem;">
+                  يرجى إدخال بريد إلكتروني صحيح
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <div style="text-align: center; margin-top: 2rem;">
+                <button type="submit" class="btn btn-success" style="padding: 1rem 3rem;">إرسال النموذج المتقدم</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/app.js"></script>
+  <script src="../js/theme-script.js"></script>
+
+  <script>
+    // Dynamic skills functionality
+    function addSkill() {
+      const container = document.getElementById('skillsContainer');
+      const skillDiv = document.createElement('div');
+      skillDiv.style.cssText = 'display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem;';
+      skillDiv.innerHTML = `
+        <input type="text" class="form-control" placeholder="اسم المهارة" style="flex: 1;">
+        <select class="form-control form-select" style="width: 150px;">
+          <option>مبتدئ</option>
+          <option>متوسط</option>
+          <option>متقدم</option>
+          <option>خبير</option>
+        </select>
+        <button type="button" class="btn btn-danger" onclick="removeSkill(this)">حذف</button>
+      `;
+      container.appendChild(skillDiv);
+    }
+
+    function removeSkill(button) {
+      button.parentElement.remove();
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+  <link rel="stylesheet" href="../css/style.css">
+  <title>العناصر المتقدمة - لوحة تحكم عربية</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- sidebar -->
+    <div class="sidebar">
+      <ul class="nav-list">
+        <li class="nav-item brand-name">
+          <a href="../index.html">
+            <span class="icon">
+              <i class='bx bx-md bxs-castle'></i>
+            </span>
+            <span class="title">العلامة</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../index.html">
+            <span class="icon">
+              <i class='bx bx-md bx-home'></i>
+            </span>
+            <span class="title">لوحة التحكم</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="products.html">
+            <span class="icon">
+              <i class='bx bx-md bx-cube'></i>
+            </span>
+            <span class="title">المنتجات</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="orders.html">
+            <span class="icon">
+              <i class='bx bx-md bx-package'></i>
+            </span>
+            <span class="title">الطلبيات</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="categories.html">
+            <span class="icon">
+              <i class='bx bx-md bx-list-ul'></i>
+            </span>
+            <span class="title">الاقسام</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="packeges.html">
+            <span class="icon">
+              <i class='bx bx-md bx-minus-back'></i>
+            </span>
+            <span class="title">البكجات</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="offers.html">
+            <span class="icon">
+              <i class='bx bx-md bxs-offer'></i>
+            </span>
+            <span class="title">العروض</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="users.html">
+            <span class="icon">
+              <i class='bx bx-md bx-group'></i>
+            </span>
+            <span class="title">الزبائن</span>
+          </a>
+        </li>
+        <li class="nav-item has-submenu">
+          <a href="#" onclick="toggleSubmenu(this)">
+            <span class="icon">
+              <i class='bx bx-md bx-key'></i>
+            </span>
+            <span class="title">المسؤولين</span>
+          </a>
+          <ul class="sub-menu">
+            <li class="nav-item">
+              <a href="user-add.html">
+                <span class="icon"><i class='bx bx-user-plus'></i></span>
+                <span class="title">إضافة مسؤول</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon"><i class='bx bx-user-check'></i></span>
+                <span class="title">الصلاحيات</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon"><i class='bx bx-shield'></i></span>
+                <span class="title">الأمان</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item has-submenu">
+          <a href="#" onclick="toggleSubmenu(this)">
+            <span class="icon">
+              <i class='bx bx-md bx-archive'></i>
+            </span>
+            <span class="title">المخزن</span>
+          </a>
+          <ul class="sub-menu">
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon"><i class='bx bx-box'></i></span>
+                <span class="title">إدارة المخزون</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon"><i class='bx bx-transfer'></i></span>
+                <span class="title">حركة البضائع</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon"><i class='bx bx-bar-chart'></i></span>
+                <span class="title">تقارير المخزون</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon"><i class='bx bx-error'></i></span>
+                <span class="title">التنبيهات</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="#">
+            <span class="icon">
+              <i class='bx bx-md bx-minus-back'></i>
+            </span>
+            <span class="title">المرجوع</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#">
+            <span class="icon">
+              <i class='bx bx-md bx-pulse bx-rotate-90'></i>
+            </span>
+            <span class="title">التلف</span>
+          </a>
+        </li>
+        <li class="nav-item has-submenu">
+          <a href="#" onclick="toggleSubmenu(this)">
+            <span class="icon">
+              <i class='bx bx-md bx-file-blank'></i>
+            </span>
+            <span class="title">التقارير</span>
+          </a>
+          <ul class="sub-menu">
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon"><i class='bx bx-trending-up'></i></span>
+                <span class="title">تقرير المبيعات</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon"><i class='bx bx-money'></i></span>
+                <span class="title">التقرير المالي</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon"><i class='bx bx-user'></i></span>
+                <span class="title">تقرير العملاء</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon"><i class='bx bx-pie-chart'></i></span>
+                <span class="title">تحليلات متقدمة</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="components.html">
+            <span class="icon">
+              <i class='bx bx-md bx-layer'></i>
+            </span>
+            <span class="title">العناصر</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="forms.html">
+            <span class="icon">
+              <i class='bx bx-md bx-edit'></i>
+            </span>
+            <span class="title">النماذج</span>
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a href="advanced-demo.html">
+            <span class="icon">
+              <i class='bx bx-md bx-rocket'></i>
+            </span>
+            <span class="title">العناصر المتقدمة</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="settings.html">
+            <span class="icon">
+              <i class='bx bx-md bx-cog'></i>
+            </span>
+            <span class="title">الاعدادات</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- main content -->
+    <div class="main">
+      <!-- Top Bar -->
+      <div class="topbar">
+        <!-- Toggle button -->
+        <div class="toggle">
+          <i class='bx bx-menu' name="menu"></i>
+          <i class='bx bx-x' name="close"></i>
+        </div>
+
+        <!-- Global Search -->
+        <div id="global-search"></div>
+
+        <!-- User profile -->
+        <div class="user">
+          <!-- Language Switcher -->
+          <div class="language-switcher">
+            <button class="language-btn" onclick="toggleLanguage()" id="languageBtn">
+              العربية
+            </button>
+          </div>
+
+          <!-- Color Picker -->
+          <div class="color-picker">
+            <div class="color-btn" onclick="toggleColorPalette()"></div>
+            <div class="color-palette" id="colorPalette">
+              <div class="color-option" style="background: #7380ec" onclick="changeColor('#7380ec')"
+                data-color="#7380ec"></div>
+              <div class="color-option" style="background: #ff6b6b" onclick="changeColor('#ff6b6b')"
+                data-color="#ff6b6b"></div>
+              <div class="color-option" style="background: #4ecdc4" onclick="changeColor('#4ecdc4')"
+                data-color="#4ecdc4"></div>
+              <div class="color-option" style="background: #45b7d1" onclick="changeColor('#45b7d1')"
+                data-color="#45b7d1"></div>
+              <div class="color-option" style="background: #96ceb4" onclick="changeColor('#96ceb4')"
+                data-color="#96ceb4"></div>
+              <div class="color-option" style="background: #ffeaa7" onclick="changeColor('#ffeaa7')"
+                data-color="#ffeaa7"></div>
+              <div class="color-option" style="background: #dda0dd" onclick="changeColor('#dda0dd')"
+                data-color="#dda0dd"></div>
+              <div class="color-option" style="background: #98d8c8" onclick="changeColor('#98d8c8')"
+                data-color="#98d8c8"></div>
+            </div>
+          </div>
+
+          <!-- Theme Toggler -->
+          <div class="theme-toggler">
+            <span class="icon">
+              <i class='bx bx-sun' name="sun"></i>
+            </span>
+          </div>
+
+          <div class="dropBox">
+            <div class="select-btn">
+              <span class="icon">
+                <i class='bx bx-chevron-down'></i>
+              </span>
+              <span class="user-name">John Doe</span>
+              <div class="img-box"><img src="../images/admin.jpg" alt=""></div>
+            </div>
+
+            <div class="result-box">
+              <div class="items">
+                <ul>
+                  <li><a href="">اعدادات الحساب</a><i class='bx bx-user-circle'></i></li>
+                  <li><a href="">سياسة الاستخدام</a><i class='bx bx-notepad'></i></li>
+                  <li><a href="">تواصل معنا</a><i class='bx bx-info-circle'></i></li>
+                  <hr>
+                  <li><a href="">تسجيل خروج</a><i class='bx bx-log-out-circle'></i></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="content">
+        <div class="content-header">
+          <h2>العناصر المتقدمة</h2>
+          <div style="display: flex; gap: 1rem;">
+            <button class="btn btn-success" onclick="testToast('success')">نجح</button>
+            <button class="btn btn-warning" onclick="testToast('warning')">تحذير</button>
+            <button class="btn btn-danger" onclick="testToast('error')">خطأ</button>
+            <button class="btn btn-primary" onclick="testToast('info')">معلومة</button>
+          </div>
+        </div>
+
+        <div class="content-body">
+          <!-- Enhanced Tabs -->
+          <div class="modern-card">
+            <div class="card-header">
+              <h3 class="card-title">نظام التبويبات المحسن</h3>
+            </div>
+
+            <div class="tabs-container" id="demo-tabs">
+              <div class="tabs-nav">
+                <button class="tab-button active">لوحة التحكم</button>
+                <button class="tab-button">الإحصائيات</button>
+                <button class="tab-button">التقارير</button>
+                <button class="tab-button">الإعدادات</button>
+                <button class="tab-button">المساعدة</button>
+              </div>
+
+              <div class="tab-content active">
+                <h3>لوحة التحكم الرئيسية</h3>
+                <p>مرحباً بك في لوحة التحكم الخاصة بك. هنا يمكنك رؤية أهم المعلومات والإحصائيات.</p>
+                <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                  <span class="badge badge-primary">جديد</span>
+                  <span class="badge badge-success">مفعل</span>
+                  <span class="badge badge-warning">معلق</span>
+                </div>
+              </div>
+
+              <div class="tab-content">
+                <h3>الإحصائيات المفصلة</h3>
+                <p>عرض تفصيلي للإحصائيات ومؤشرات الأداء الرئيسية للموقع.</p>
+                <div
+                  style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                  <div
+                    style="text-align: center; padding: 1rem; background: var(--color-background); border-radius: var(--border-radius-2);">
+                    <div style="font-size: 2rem; color: var(--color-primary);">1,234</div>
+                    <div>إجمالي الزيارات</div>
+                  </div>
+                  <div
+                    style="text-align: center; padding: 1rem; background: var(--color-background); border-radius: var(--border-radius-2);">
+                    <div style="font-size: 2rem; color: var(--color-success);">567</div>
+                    <div>المستخدمين النشطين</div>
+                  </div>
+                  <div
+                    style="text-align: center; padding: 1rem; background: var(--color-background); border-radius: var(--border-radius-2);">
+                    <div style="font-size: 2rem; color: var(--color-warning);">89</div>
+                    <div>الطلبات الجديدة</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-content">
+                <h3>التقارير والتحليلات</h3>
+                <p>تقارير شاملة عن أداء النظام والمبيعات والعملاء.</p>
+                <div style="margin-top: 1rem;">
+                  <div class="dropdown" id="report-dropdown">
+                    <div class="dropdown-toggle">
+                      <span class="dropdown-text">اختر نوع التقرير</span>
+                      <i class='bx bx-chevron-down dropdown-arrow'></i>
+                    </div>
+                    <div class="dropdown-menu">
+                      <div class="dropdown-item">تقرير المبيعات اليومي</div>
+                      <div class="dropdown-item">تقرير المبيعات الشهري</div>
+                      <div class="dropdown-item">تقرير العملاء</div>
+                      <div class="dropdown-item">تقرير المخزون</div>
+                      <div class="dropdown-item">تقرير الأرباح</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-content">
+                <h3>إعدادات النظام</h3>
+                <p>تخصيص وإعداد النظام حسب احتياجاتك.</p>
+                <div style="margin-top: 1rem;">
+                  <div class="form-group">
+                    <label class="form-label">اسم الموقع</label>
+                    <input type="text" class="form-control" value="لوحة التحكم العربية" style="max-width: 300px;">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">البريد الإلكتروني</label>
+                    <input type="email" class="form-control" value="admin@example.com" style="max-width: 300px;">
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-content">
+                <h3>المساعدة والدعم</h3>
+                <p>احصل على المساعدة والدعم الفني للنظام.</p>
+                <div style="margin-top: 1rem;">
+                  <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <button class="btn btn-outline-primary">دليل المستخدم</button>
+                    <button class="btn btn-outline-success">تواصل مع الدعم</button>
+                    <button class="btn btn-outline-warning">الأسئلة الشائعة</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Enhanced Table with Sorting -->
+          <div class="modern-card">
+            <div class="card-header">
+              <h3 class="card-title">جدول محسن مع الترتيب</h3>
+            </div>
+
+            <table class="modern-table" id="users-table">
+              <thead>
+                <tr>
+                  <th data-sortable="false">#</th>
+                  <th>الاسم</th>
+                  <th>البريد الإلكتروني</th>
+                  <th>تاريخ التسجيل</th>
+                  <th>الحالة</th>
+                  <th>النقاط</th>
+                  <th data-sortable="false">الإجراءات</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>أحمد محمد علي</td>
+                  <td>ahmed@example.com</td>
+                  <td>2024-01-15</td>
+                  <td><span class="badge badge-success">مفعل</span></td>
+                  <td>1250</td>
+                  <td>
+                    <button class="btn btn-outline-primary">تعديل</button>
+                    <button class="btn btn-outline-danger">حذف</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>فاطمة أحمد</td>
+                  <td>fatima@example.com</td>
+                  <td>2024-01-10</td>
+                  <td><span class="badge badge-warning">معلق</span></td>
+                  <td>890</td>
+                  <td>
+                    <button class="btn btn-outline-primary">تعديل</button>
+                    <button class="btn btn-outline-danger">حذف</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>محمد حسن</td>
+                  <td>mohamed@example.com</td>
+                  <td>2024-01-08</td>
+                  <td><span class="badge badge-danger">معطل</span></td>
+                  <td>340</td>
+                  <td>
+                    <button class="btn btn-outline-primary">تعديل</button>
+                    <button class="btn btn-outline-danger">حذف</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>سارة علي</td>
+                  <td>sara@example.com</td>
+                  <td>2024-01-20</td>
+                  <td><span class="badge badge-success">مفعل</span></td>
+                  <td>2100</td>
+                  <td>
+                    <button class="btn btn-outline-primary">تعديل</button>
+                    <button class="btn btn-outline-danger">حذف</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>خالد أحمد</td>
+                  <td>khalid@example.com</td>
+                  <td>2024-01-12</td>
+                  <td><span class="badge badge-success">مفعل</span></td>
+                  <td>1650</td>
+                  <td>
+                    <button class="btn btn-outline-primary">تعديل</button>
+                    <button class="btn btn-outline-danger">حذف</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- Pagination -->
+            <div id="users-pagination"></div>
+          </div>
+
+          <!-- More Dropdowns -->
+          <div class="modern-card">
+            <div class="card-header">
+              <h3 class="card-title">قوائم منسدلة متقدمة</h3>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+              <div>
+                <label class="form-label">اختر البلد</label>
+                <div class="dropdown" id="country-dropdown">
+                  <div class="dropdown-toggle">
+                    <span class="dropdown-text">اختر البلد</span>
+                    <i class='bx bx-chevron-down dropdown-arrow'></i>
+                  </div>
+                  <div class="dropdown-menu">
+                    <div class="dropdown-item">🇸🇦 السعودية</div>
+                    <div class="dropdown-item">🇦🇪 الإمارات</div>
+                    <div class="dropdown-item">🇰🇼 الكويت</div>
+                    <div class="dropdown-item">🇶🇦 قطر</div>
+                    <div class="dropdown-item">🇧🇭 البحرين</div>
+                    <div class="dropdown-item">🇴🇲 عمان</div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <label class="form-label">اختر الفئة</label>
+                <div class="dropdown" id="category-dropdown">
+                  <div class="dropdown-toggle">
+                    <span class="dropdown-text">اختر الفئة</span>
+                    <i class='bx bx-chevron-down dropdown-arrow'></i>
+                  </div>
+                  <div class="dropdown-menu">
+                    <div class="dropdown-item">📱 الإلكترونيات</div>
+                    <div class="dropdown-item">👕 الملابس</div>
+                    <div class="dropdown-item">🏠 المنزل والحديقة</div>
+                    <div class="dropdown-item">🚗 السيارات</div>
+                    <div class="dropdown-item">📚 الكتب</div>
+                    <div class="dropdown-item">🎮 الألعاب</div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <label class="form-label">ترتيب حسب</label>
+                <div class="dropdown" id="sort-dropdown">
+                  <div class="dropdown-toggle">
+                    <span class="dropdown-text">ترتيب حسب</span>
+                    <i class='bx bx-chevron-down dropdown-arrow'></i>
+                  </div>
+                  <div class="dropdown-menu">
+                    <div class="dropdown-item">الأحدث أولاً</div>
+                    <div class="dropdown-item">الأقدم أولاً</div>
+                    <div class="dropdown-item">الاسم أ-ي</div>
+                    <div class="dropdown-item">الاسم ي-أ</div>
+                    <div class="dropdown-item">السعر (الأقل)</div>
+                    <div class="dropdown-item">السعر (الأعلى)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Badge Examples -->
+          <div class="modern-card">
+            <div class="card-header">
+              <h3 class="card-title">الشارات والعلامات</h3>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+              <div>
+                <h4>الشارات الأساسية</h4>
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem;">
+                  <span class="badge badge-primary">أساسي</span>
+                  <span class="badge badge-success">نجح</span>
+                  <span class="badge badge-warning">تحذير</span>
+                  <span class="badge badge-danger">خطر</span>
+                  <span class="badge badge-info">معلومة</span>
+                  <span class="badge badge-light">فاتح</span>
+                </div>
+              </div>
+
+              <div>
+                <h4>شارات مع نقاط</h4>
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem;">
+                  <span class="badge badge-primary badge-dot">متصل</span>
+                  <span class="badge badge-success badge-dot">مفعل</span>
+                  <span class="badge badge-warning badge-dot">معلق</span>
+                  <span class="badge badge-danger badge-dot">غير متصل</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/app.js"></script>
+  <script src="../js/theme-script.js"></script>
+  <script src="../js/advanced-components.js"></script>
+
+  <script>
+    // Initialize components when page loads
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initialize tabs
+      new TabManager('demo-tabs');
+
+      // Initialize table with sorting
+      new ModernTable('users-table');
+
+      // Initialize dropdowns
+      new Dropdown('report-dropdown');
+      new Dropdown('country-dropdown');
+      new Dropdown('category-dropdown');
+      new Dropdown('sort-dropdown');
+
+      // Initialize pagination with sample data
+      const sampleData = Array.from({ length: 50 }, (_, i) => ({
+        id: i + 1,
+        name: `User ${i + 1}`,
+        email: `user${i + 1}@example.com`
+      }));
+
+      const pagination = new Pagination('users-pagination', {
+        itemsPerPage: 5,
+        onPageChange: (data, page) => {
+          console.log(`Page ${page}:`, data);
+        }
+      });
+      pagination.setData(sampleData);
+    });
+
+    // Test toast notifications
+    function testToast(type) {
+      const messages = {
+        success: 'تم حفظ البيانات بنجاح!',
+        warning: 'يرجى مراجعة البيانات المدخلة',
+        error: 'حدث خطأ أثناء معالجة الطلب',
+        info: 'لديك إشعار جديد'
+      };
+
+      const titles = {
+        success: 'نجح',
+        warning: 'تحذير',
+        error: 'خطأ',
+        info: 'معلومة'
+      };
+
+      toastManager[type](messages[type], {
+        title: titles[type],
+        duration: 4000
+      });
+    }
+  </script>
+</body>
+
+</html>

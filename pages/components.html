@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+  <link rel="stylesheet" href="../css/style.css">
+  <title>العناصر - لوحة تحكم عربية</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- sidebar -->
+    <div class="sidebar">
+      <ul class="nav-list">
+        <li class="nav-item brand-name">
+          <a href="../index.html">
+            <span class="icon">
+              <i class='bx bx-md bxs-castle'></i>
+            </span>
+            <span class="title">العلامة</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../index.html">
+            <span class="icon">
+              <i class='bx bx-md bx-home'></i>
+            </span>
+            <span class="title">لوحة التحكم</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="products.html">
+            <span class="icon">
+              <i class='bx bx-md bx-cube'></i>
+            </span>
+            <span class="title">المنتجات</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="orders.html">
+            <span class="icon">
+              <i class='bx bx-md bx-package'></i>
+            </span>
+            <span class="title">الطلبيات</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="categories.html">
+            <span class="icon">
+              <i class='bx bx-md bx-list-ul'></i>
+            </span>
+            <span class="title">الاقسام</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="packeges.html">
+            <span class="icon">
+              <i class='bx bx-md bx-minus-back'></i>
+            </span>
+            <span class="title">البكجات</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="offers.html">
+            <span class="icon">
+              <i class='bx bx-md bxs-offer'></i>
+            </span>
+            <span class="title">العروض</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="users.html">
+            <span class="icon">
+              <i class='bx bx-md bx-group'></i>
+            </span>
+            <span class="title">الزبائن</span>
+          </a>
+        </li>
+        <li class="nav-item has-submenu">
+          <a href="#" onclick="toggleSubmenu(this)">
+            <span class="icon">
+              <i class='bx bx-md bx-key'></i>
+            </span>
+            <span class="title">المسؤولين</span>
+          </a>
+          <ul class="sub-menu">
+            <li class="nav-item">
+              <a href="user-add.html">
+                <span class="icon"><i class='bx bx-user-plus'></i></span>
+                <span class="title">إضافة مسؤول</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon"><i class='bx bx-user-check'></i></span>
+                <span class="title">الصلاحيات</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item has-submenu">
+          <a href="#" onclick="toggleSubmenu(this)">
+            <span class="icon">
+              <i class='bx bx-md bx-archive'></i>
+            </span>
+            <span class="title">المخزن</span>
+          </a>
+          <ul class="sub-menu">
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon"><i class='bx bx-box'></i></span>
+                <span class="title">إدارة المخزون</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon"><i class='bx bx-transfer'></i></span>
+                <span class="title">حركة البضائع</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon"><i class='bx bx-bar-chart'></i></span>
+                <span class="title">تقارير المخزون</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="#">
+            <span class="icon">
+              <i class='bx bx-md bx-minus-back'></i>
+            </span>
+            <span class="title">المرجوع</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#">
+            <span class="icon">
+              <i class='bx bx-md bx-pulse bx-rotate-90'></i>
+            </span>
+            <span class="title">التلف</span>
+          </a>
+        </li>
+        <li class="nav-item has-submenu">
+          <a href="#" onclick="toggleSubmenu(this)">
+            <span class="icon">
+              <i class='bx bx-md bx-file-blank'></i>
+            </span>
+            <span class="title">التقارير</span>
+          </a>
+          <ul class="sub-menu">
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon"><i class='bx bx-trending-up'></i></span>
+                <span class="title">تقرير المبيعات</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon"><i class='bx bx-money'></i></span>
+                <span class="title">التقرير المالي</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon"><i class='bx bx-user'></i></span>
+                <span class="title">تقرير العملاء</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item active">
+          <a href="components.html">
+            <span class="icon">
+              <i class='bx bx-md bx-layer'></i>
+            </span>
+            <span class="title">العناصر</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="forms.html">
+            <span class="icon">
+              <i class='bx bx-md bx-edit'></i>
+            </span>
+            <span class="title">النماذج</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="settings.html">
+            <span class="icon">
+              <i class='bx bx-md bx-cog'></i>
+            </span>
+            <span class="title">الاعدادات</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- main content -->
+    <div class="main">
+      <!-- Top Bar -->
+      <div class="topbar">
+        <!-- Toggle button -->
+        <div class="toggle">
+          <i class='bx bx-menu' name="menu"></i>
+          <i class='bx bx-x' name="close"></i>
+        </div>
+        <!-- Search field -->
+        <div class="search">
+          <label for="">
+            <input type="text" placeholder="بحث">
+            <i class='bx bx-search'></i>
+          </label>
+        </div>
+
+        <!-- User profile -->
+        <div class="user">
+
+          <!-- Language Switcher -->
+          <div class="language-switcher">
+            <button class="language-btn" onclick="toggleLanguage()" id="languageBtn">
+              العربية
+            </button>
+          </div>
+
+          <!-- Color Picker -->
+          <div class="color-picker">
+            <div class="color-btn" onclick="toggleColorPalette()"></div>
+            <div class="color-palette" id="colorPalette">
+              <div class="color-option" style="background: #7380ec" onclick="changeColor('#7380ec')"
+                data-color="#7380ec"></div>
+              <div class="color-option" style="background: #ff6b6b" onclick="changeColor('#ff6b6b')"
+                data-color="#ff6b6b"></div>
+              <div class="color-option" style="background: #4ecdc4" onclick="changeColor('#4ecdc4')"
+                data-color="#4ecdc4"></div>
+              <div class="color-option" style="background: #45b7d1" onclick="changeColor('#45b7d1')"
+                data-color="#45b7d1"></div>
+              <div class="color-option" style="background: #96ceb4" onclick="changeColor('#96ceb4')"
+                data-color="#96ceb4"></div>
+              <div class="color-option" style="background: #ffeaa7" onclick="changeColor('#ffeaa7')"
+                data-color="#ffeaa7"></div>
+              <div class="color-option" style="background: #dda0dd" onclick="changeColor('#dda0dd')"
+                data-color="#dda0dd"></div>
+              <div class="color-option" style="background: #98d8c8" onclick="changeColor('#98d8c8')"
+                data-color="#98d8c8"></div>
+            </div>
+          </div>
+
+          <!-- Theme Toggler -->
+          <div class="theme-toggler">
+            <span class="icon">
+              <i class='bx bx-sun' name="sun"></i>
+            </span>
+          </div>
+
+          <div class="dropBox">
+            <div class="select-btn">
+              <span class="icon">
+                <i class='bx bx-chevron-down'></i>
+              </span>
+              <span class="user-name">John Doe</span>
+              <div class="img-box"><img src="../images/admin.jpg" alt=""></div>
+            </div>
+
+            <div class="result-box">
+              <div class="items">
+                <ul>
+                  <li><a href="">اعدادات الحساب</a><i class='bx bx-user-circle'></i></li>
+                  <li><a href="">سياسة الاستخدام</a><i class='bx bx-notepad'></i></li>
+                  <li><a href="">تواصل معنا</a><i class='bx bx-info-circle'></i></li>
+                  <hr>
+                  <li><a href="">تسجيل خروج</a><i class='bx bx-log-out-circle'></i></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="content">
+        <div class="content-header">
+          <h2>عناصر واجهة المستخدم</h2>
+          <div style="display: flex; gap: 1rem;">
+            <button class="btn btn-success" onclick="testToast('success')">نجح</button>
+            <button class="btn btn-warning" onclick="testToast('warning')">تحذير</button>
+            <button class="btn btn-danger" onclick="testToast('error')">خطأ</button>
+            <button class="btn btn-primary" onclick="testToast('info')">معلومة</button>
+            <a href="login.html" class="btn btn-outline-primary">تسجيل الدخول</a>
+          </div>
+        </div>
+
+        <div class="content-body">
+
+          <!-- Buttons Section -->
+          <div class="modern-card">
+            <div class="card-header">
+              <h3 class="card-title">الأزرار</h3>
+            </div>
+
+            <div
+              style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+              <button class="btn btn-primary">أساسي</button>
+              <button class="btn btn-secondary">ثانوي</button>
+              <button class="btn btn-success">نجح</button>
+              <button class="btn btn-danger">خطر</button>
+              <button class="btn btn-warning">تحذير</button>
+              <button class="btn btn-white">أبيض</button>
+              <button class="btn btn-dark">داكن</button>
+              <button class="btn btn-light">فاتح</button>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+              <button class="btn btn-outline-primary">محدد أساسي</button>
+              <button class="btn btn-outline-secondary">محدد ثانوي</button>
+              <button class="btn btn-outline-success">محدد نجح</button>
+              <button class="btn btn-outline-danger">محدد خطر</button>
+              <button class="btn btn-outline-warning">محدد تحذير</button>
+              <button class="btn btn-outline-white">محدد أبيض</button>
+              <button class="btn btn-outline-dark">محدد داكن</button>
+              <button class="btn btn-outline-light">محدد فاتح</button>
+            </div>
+          </div>
+
+          <!-- Status Badges -->
+          <div class="modern-card">
+            <div class="card-header">
+              <h3 class="card-title">شارات الحالة</h3>
+            </div>
+
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <span class="status-success">مفعل</span>
+              <span class="status-warning">في الانتظار</span>
+              <span class="status-danger">معطل</span>
+            </div>
+          </div>
+
+          <!-- Cards Grid -->
+          <div class="modern-card">
+            <div class="card-header">
+              <h3 class="card-title">بطاقات إحصائية</h3>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+              <div
+                style="background: var(--color-white); padding: 2rem; border-radius: var(--card-border-radius); box-shadow: var(--box-shadow); display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                  <div style="font-size: 2rem; font-weight: bold; color: var(--color-primary);">1,234</div>
+                  <div style="color: var(--color-dark); font-size: 1.1rem;">إجمالي المبيعات</div>
+                </div>
+                <div style="font-size: 3rem; color: var(--color-primary);">
+                  <i class='bx bx-trending-up'></i>
+                </div>
+              </div>
+
+              <div
+                style="background: var(--color-white); padding: 2rem; border-radius: var(--card-border-radius); box-shadow: var(--box-shadow); display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                  <div style="font-size: 2rem; font-weight: bold; color: var(--color-success);">567</div>
+                  <div style="color: var(--color-dark); font-size: 1.1rem;">عملاء جدد</div>
+                </div>
+                <div style="font-size: 3rem; color: var(--color-success);">
+                  <i class='bx bx-user-plus'></i>
+                </div>
+              </div>
+
+              <div
+                style="background: var(--color-white); padding: 2rem; border-radius: var(--card-border-radius); box-shadow: var(--box-shadow); display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                  <div style="font-size: 2rem; font-weight: bold; color: var(--color-warning);">89</div>
+                  <div style="color: var(--color-dark); font-size: 1.1rem;">طلبات معلقة</div>
+                </div>
+                <div style="font-size: 3rem; color: var(--color-warning);">
+                  <i class='bx bx-time'></i>
+                </div>
+              </div>
+
+              <div
+                style="background: var(--color-white); padding: 2rem; border-radius: var(--card-border-radius); box-shadow: var(--box-shadow); display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                  <div style="font-size: 2rem; font-weight: bold; color: var(--color-danger);">12</div>
+                  <div style="color: var(--color-dark); font-size: 1.1rem;">تحذيرات</div>
+                </div>
+                <div style="font-size: 3rem; color: var(--color-danger);">
+                  <i class='bx bx-error'></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tables -->
+          <div class="modern-card">
+            <div class="card-header">
+              <h3 class="card-title">الجداول</h3>
+            </div>
+
+            <div style="overflow-x: auto;">
+              <table style="width: 100%; border-collapse: collapse;">
+                <thead>
+                  <tr style="background: var(--color-info-light);">
+                    <th style="padding: 1rem; text-align: center; border: 1px solid var(--color-dark);">الرقم</th>
+                    <th style="padding: 1rem; text-align: center; border: 1px solid var(--color-dark);">الاسم</th>
+                    <th style="padding: 1rem; text-align: center; border: 1px solid var(--color-dark);">البريد
+                      الإلكتروني</th>
+                    <th style="padding: 1rem; text-align: center; border: 1px solid var(--color-dark);">الحالة</th>
+                    <th style="padding: 1rem; text-align: center; border: 1px solid var(--color-dark);">الإجراءات</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="padding: 1rem; text-align: center; border: 1px solid var(--color-dark);">1</td>
+                    <td style="padding: 1rem; text-align: center; border: 1px solid var(--color-dark);">أحمد محمد</td>
+                    <td style="padding: 1rem; text-align: center; border: 1px solid var(--color-dark);">
+                      ahmed@example.com</td>
+                    <td style="padding: 1rem; text-align: center; border: 1px solid var(--color-dark);"><span
+                        class="status-success">مفعل</span></td>
+                    <td style="padding: 1rem; text-align: center; border: 1px solid var(--color-dark);">
+                      <button class="btn btn-outline-primary" style="margin: 0 5px;">تعديل</button>
+                      <button class="btn btn-outline-danger" style="margin: 0 5px;">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 1rem; text-align: center; border: 1px solid var(--color-dark);">2</td>
+                    <td style="padding: 1rem; text-align: center; border: 1px solid var(--color-dark);">فاطمة علي</td>
+                    <td style="padding: 1rem; text-align: center; border: 1px solid var(--color-dark);">
+                      fatima@example.com</td>
+                    <td style="padding: 1rem; text-align: center; border: 1px solid var(--color-dark);"><span
+                        class="status-warning">معلق</span></td>
+                    <td style="padding: 1rem; text-align: center; border: 1px solid var(--color-dark);">
+                      <button class="btn btn-outline-primary" style="margin: 0 5px;">تعديل</button>
+                      <button class="btn btn-outline-danger" style="margin: 0 5px;">حذف</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 1rem; text-align: center; border: 1px solid var(--color-dark);">3</td>
+                    <td style="padding: 1rem; text-align: center; border: 1px solid var(--color-dark);">محمد أحمد</td>
+                    <td style="padding: 1rem; text-align: center; border: 1px solid var(--color-dark);">
+                      mohamed@example.com</td>
+                    <td style="padding: 1rem; text-align: center; border: 1px solid var(--color-dark);"><span
+                        class="status-danger">معطل</span></td>
+                    <td style="padding: 1rem; text-align: center; border: 1px solid var(--color-dark);">
+                      <button class="btn btn-outline-primary" style="margin: 0 5px;">تعديل</button>
+                      <button class="btn btn-outline-danger" style="margin: 0 5px;">حذف</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Icons Grid -->
+          <div class="modern-card">
+            <div class="card-header">
+              <h3 class="card-title">الأيقونات</h3>
+            </div>
+
+            <div
+              style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 2rem; text-align: center;">
+              <div>
+                <i class='bx bx-home' style="font-size: 3rem; color: var(--color-primary);"></i>
+                <div style="margin-top: 0.5rem;">الرئيسية</div>
+              </div>
+              <div>
+                <i class='bx bx-user' style="font-size: 3rem; color: var(--color-success);"></i>
+                <div style="margin-top: 0.5rem;">المستخدم</div>
+              </div>
+              <div>
+                <i class='bx bx-cog' style="font-size: 3rem; color: var(--color-warning);"></i>
+                <div style="margin-top: 0.5rem;">الإعدادات</div>
+              </div>
+              <div>
+                <i class='bx bx-chart' style="font-size: 3rem; color: var(--color-danger);"></i>
+                <div style="margin-top: 0.5rem;">التقارير</div>
+              </div>
+              <div>
+                <i class='bx bx-bell' style="font-size: 3rem; color: var(--color-info-dark);"></i>
+                <div style="margin-top: 0.5rem;">التنبيهات</div>
+              </div>
+              <div>
+                <i class='bx bx-envelope' style="font-size: 3rem; color: var(--color-primary);"></i>
+                <div style="margin-top: 0.5rem;">الرسائل</div>
+              </div>
+              <div>
+                <i class='bx bx-calendar' style="font-size: 3rem; color: var(--color-success);"></i>
+                <div style="margin-top: 0.5rem;">التقويم</div>
+              </div>
+              <div>
+                <i class='bx bx-folder' style="font-size: 3rem; color: var(--color-warning);"></i>
+                <div style="margin-top: 0.5rem;">الملفات</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Progress Bars -->
+          <div class="modern-card">
+            <div class="card-header">
+              <h3 class="card-title">أشرطة التقدم</h3>
+            </div>
+
+            <div style="display: grid; gap: 2rem;">
+              <div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                  <span>المشروع أ</span>
+                  <span>75%</span>
+                </div>
+                <div style="background: var(--color-info-light); height: 10px; border-radius: 5px; overflow: hidden;">
+                  <div style="background: var(--color-primary); height: 100%; width: 75%; border-radius: 5px;"></div>
+                </div>
+              </div>
+
+              <div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                  <span>المشروع ب</span>
+                  <span>45%</span>
+                </div>
+                <div style="background: var(--color-info-light); height: 10px; border-radius: 5px; overflow: hidden;">
+                  <div style="background: var(--color-warning); height: 100%; width: 45%; border-radius: 5px;"></div>
+                </div>
+              </div>
+
+              <div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                  <span>المشروع ج</span>
+                  <span>90%</span>
+                </div>
+                <div style="background: var(--color-info-light); height: 10px; border-radius: 5px; overflow: hidden;">
+                  <div style="background: var(--color-success); height: 100%; width: 90%; border-radius: 5px;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alerts -->
+          <div class="modern-card">
+            <div class="card-header">
+              <h3 class="card-title">التنبيهات</h3>
+            </div>
+
+            <div style="display: grid; gap: 1rem;">
+              <div
+                style="padding: 1rem; background: rgba(115, 128, 236, 0.1); border: 1px solid var(--color-primary); border-radius: var(--border-radius-2); color: var(--color-primary);">
+                <strong>معلومة:</strong> هذا تنبيه معلوماتي
+              </div>
+
+              <div
+                style="padding: 1rem; background: rgba(65, 241, 182, 0.1); border: 1px solid var(--color-success); border-radius: var(--border-radius-2); color: var(--color-success);">
+                <strong>نجح:</strong> تم إكمال العملية بنجاح
+              </div>
+
+              <div
+                style="padding: 1rem; background: rgba(255, 187, 85, 0.1); border: 1px solid var(--color-warning); border-radius: var(--border-radius-2); color: var(--color-warning);">
+                <strong>تحذير:</strong> يرجى الانتباه لهذه المسألة
+              </div>
+
+              <div
+                style="padding: 1rem; background: rgba(255, 119, 130, 0.1); border: 1px solid var(--color-danger); border-radius: var(--border-radius-2); color: var(--color-danger);">
+                <strong>خطأ:</strong> حدث خطأ ما
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/app.js"></script>
+  <script src="../js/theme-script.js"></script>
+  <script src="../js/advanced-components.js"></script>
+
+  <script>
+    // Test toast notifications
+    function testToast(type) {
+      const messages = {
+        success: 'تم حفظ البيانات بنجاح!',
+        warning: 'يرجى مراجعة البيانات المدخلة',
+        error: 'حدث خطأ أثناء معالجة الطلب',
+        info: 'لديك إشعار جديد'
+      };
+
+      const titles = {
+        success: 'نجح',
+        warning: 'تحذير',
+        error: 'خطأ',
+        info: 'معلومة'
+      };
+
+      if (window.toastManager) {
+        toastManager[type](messages[type], {
+          title: titles[type],
+          duration: 4000
+        });
+      }
+    }
+  </script>
+</body>
+
+</html>

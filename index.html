@@ -84,21 +84,55 @@
             <span class="title">الزبائن</span>
           </a>
         </li>
-        <li class="nav-item">
-          <a href="#">
+        <li class="nav-item has-submenu">
+          <a href="#" onclick="toggleSubmenu(this)">
             <span class="icon">
               <i class='bx bx-md bx-key'></i>
             </span>
             <span class="title">المسؤولين</span>
           </a>
+          <ul class="sub-menu">
+            <li class="nav-item">
+              <a href="pages/user-add.html">
+                <span class="icon"><i class='bx bx-user-plus'></i></span>
+                <span class="title">إضافة مسؤول</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon"><i class='bx bx-user-check'></i></span>
+                <span class="title">الصلاحيات</span>
+              </a>
+            </li>
+          </ul>
         </li>
-        <li class="nav-item">
-          <a href="#">
+        <li class="nav-item has-submenu">
+          <a href="#" onclick="toggleSubmenu(this)">
             <span class="icon">
               <i class='bx bx-md bx-archive'></i>
             </span>
             <span class="title">المخزن</span>
           </a>
+          <ul class="sub-menu">
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon"><i class='bx bx-box'></i></span>
+                <span class="title">إدارة المخزون</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon"><i class='bx bx-transfer'></i></span>
+                <span class="title">حركة البضائع</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon"><i class='bx bx-bar-chart'></i></span>
+                <span class="title">تقارير المخزون</span>
+              </a>
+            </li>
+          </ul>
         </li>
         <li class="nav-item">
           <a href="#">
@@ -116,8 +150,60 @@
             <span class="title">التلف</span>
           </a>
         </li>
+        <li class="nav-item has-submenu">
+          <a href="#" onclick="toggleSubmenu(this)">
+            <span class="icon">
+              <i class='bx bx-md bx-file-blank'></i>
+            </span>
+            <span class="title">التقارير</span>
+          </a>
+          <ul class="sub-menu">
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon"><i class='bx bx-trending-up'></i></span>
+                <span class="title">تقرير المبيعات</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon"><i class='bx bx-money'></i></span>
+                <span class="title">التقرير المالي</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon"><i class='bx bx-user'></i></span>
+                <span class="title">تقرير العملاء</span>
+              </a>
+            </li>
+          </ul>
+        </li>
         <li class="nav-item">
-          <a href="settings.html">
+          <a href="pages/components.html">
+            <span class="icon">
+              <i class='bx bx-md bx-layer'></i>
+            </span>
+            <span class="title">العناصر</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="pages/forms.html">
+            <span class="icon">
+              <i class='bx bx-md bx-edit'></i>
+            </span>
+            <span class="title">النماذج</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="pages/advanced-demo.html">
+            <span class="icon">
+              <i class='bx bx-md bx-rocket'></i>
+            </span>
+            <span class="title">العناصر المتقدمة</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="pages/settings.html">
             <span class="icon">
               <i class='bx bx-md bx-cog'></i>
             </span>
@@ -136,16 +222,41 @@
           <i class='bx bx-menu' name="menu"></i>
           <i class='bx bx-x' name="close"></i>
         </div>
-        <!-- Search field -->
-        <div class="search">
-          <label for="">
-            <input type="text" placeholder="بحث">
-            <i class='bx bx-search'></i>
-          </label>
-        </div>
+        <!-- Global Search -->
+        <div id="global-search"></div>
 
         <!-- User profile -->
         <div class="user">
+
+          <!-- Language Switcher -->
+          <div class="language-switcher">
+            <button class="language-btn" onclick="toggleLanguage()" id="languageBtn">
+              العربية
+            </button>
+          </div>
+
+          <!-- Color Picker -->
+          <div class="color-picker">
+            <div class="color-btn" onclick="toggleColorPalette()"></div>
+            <div class="color-palette" id="colorPalette">
+              <div class="color-option" style="background: #7380ec" onclick="changeColor('#7380ec')"
+                data-color="#7380ec"></div>
+              <div class="color-option" style="background: #ff6b6b" onclick="changeColor('#ff6b6b')"
+                data-color="#ff6b6b"></div>
+              <div class="color-option" style="background: #4ecdc4" onclick="changeColor('#4ecdc4')"
+                data-color="#4ecdc4"></div>
+              <div class="color-option" style="background: #45b7d1" onclick="changeColor('#45b7d1')"
+                data-color="#45b7d1"></div>
+              <div class="color-option" style="background: #96ceb4" onclick="changeColor('#96ceb4')"
+                data-color="#96ceb4"></div>
+              <div class="color-option" style="background: #ffeaa7" onclick="changeColor('#ffeaa7')"
+                data-color="#ffeaa7"></div>
+              <div class="color-option" style="background: #dda0dd" onclick="changeColor('#dda0dd')"
+                data-color="#dda0dd"></div>
+              <div class="color-option" style="background: #98d8c8" onclick="changeColor('#98d8c8')"
+                data-color="#98d8c8"></div>
+            </div>
+          </div>
 
           <!-- Theme Toggler -->
           <div class="theme-toggler">
@@ -182,6 +293,33 @@
           </div>
 
 
+        </div>
+      </div>
+
+      <!-- Welcome Section -->
+      <div class="modern-card" style="text-align: center; margin: 20px; margin-bottom: 2rem;">
+        <h2 style="color: var(--color-primary); margin-bottom: 1rem;">مرحباً بك في لوحة التحكم الحديثة</h2>
+        <p style="color: var(--color-dark-variant); font-size: 1.1rem; margin-bottom: 1.5rem;">
+          لوحة تحكم شاملة تدعم اللغة العربية والإنجليزية مع إمكانيات متقدمة لتخصيص الألوان والموضوع
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 1.5rem; flex-wrap: wrap;">
+          <a href="pages/components.html" class="btn btn-outline-primary">عرض العناصر</a>
+          <a href="pages/forms.html" class="btn btn-outline-success">النماذج</a>
+          <a href="pages/login.html" class="btn btn-primary">تسجيل الدخول</a>
+        </div>
+        <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap;">
+          <span class="tooltip" data-tooltip="تغيير اللغة">
+            <i class='bx bx-world' style="font-size: 2rem; color: var(--color-primary);"></i>
+          </span>
+          <span class="tooltip" data-tooltip="تخصيص الألوان">
+            <i class='bx bx-palette' style="font-size: 2rem; color: var(--color-success);"></i>
+          </span>
+          <span class="tooltip" data-tooltip="الموضوع الداكن/الفاتح">
+            <i class='bx bx-sun' style="font-size: 2rem; color: var(--color-warning);"></i>
+          </span>
+          <span class="tooltip" data-tooltip="تصميم متجاوب">
+            <i class='bx bx-mobile' style="font-size: 2rem; color: var(--color-danger);"></i>
+          </span>
         </div>
       </div>
 
@@ -230,6 +368,7 @@
 
   <script src="js/app.js"></script>
   <script src="js/theme-script.js"></script>
+  <script src="js/advanced-components.js"></script>
   <script src="js/alpine.js"></script>
 </body>
 
