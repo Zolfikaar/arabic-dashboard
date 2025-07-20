@@ -2,7 +2,7 @@
 
 A modern, responsive, and feature-rich admin dashboard that supports both Arabic and English languages with complete RTL/LTR functionality.
 
-![Dashboard Preview](images/favicon.ico)
+![Dashboard Preview](images/screenshot.png)
 
 ## ✨ Features
 
